@@ -1,4 +1,4 @@
-app-id: io.github.JuergenFleiss.aTrain
+app-id: io.github.juergenfleiss.atrain
 runtime: org.gnome.Platform
 runtime-version: "49"
 sdk: org.gnome.Sdk
@@ -6,9 +6,9 @@ command: run-atrain.sh
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
-  - --device=dri 
-  - --share=ipc 
-  - --share=network 
+  - --device=dri
+  - --share=ipc
+  - --share=network
   - --filesystem=xdg-documents #atrain stores transcriptions in ~/Documents/aTrain/...
 
 modules:
@@ -38,13 +38,6 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps .
-      - sed -i
-        -e 's|https://raw.githubusercontent.com/JuergenFleiss/aTrain/v1.4.1/docs/images/screenshot_1.png|https://raw.githubusercontent.com/JuergenFleiss/aTrain/865b4291a31cdfa8d1ab6a5e31998a6df28f752b/share/screenshots/screenshot_1.png|g'
-        -e 's|https://raw.githubusercontent.com/JuergenFleiss/aTrain/v1.4.1/docs/images/screenshot_2.png|https://raw.githubusercontent.com/JuergenFleiss/aTrain/865b4291a31cdfa8d1ab6a5e31998a6df28f752b/share/screenshots/screenshot_2.png|g'
-        -e 's|https://raw.githubusercontent.com/JuergenFleiss/aTrain/v1.4.1/docs/images/screenshot_3.png|https://raw.githubusercontent.com/JuergenFleiss/aTrain/865b4291a31cdfa8d1ab6a5e31998a6df28f752b/share/screenshots/screenshot_3.png|g'
-        -e 's|https://raw.githubusercontent.com/JuergenFleiss/aTrain/v1.4.1/docs/images/screenshot_4.png|https://raw.githubusercontent.com/JuergenFleiss/aTrain/865b4291a31cdfa8d1ab6a5e31998a6df28f752b/share/screenshots/screenshot_4.png|g'
-        -e 's|https://raw.githubusercontent.com/JuergenFleiss/aTrain/v1.4.1/docs/images/screenshot_5.png|https://raw.githubusercontent.com/JuergenFleiss/aTrain/865b4291a31cdfa8d1ab6a5e31998a6df28f752b/share/screenshots/screenshot_5.png|g'
-        share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm755 flatpak/run-atrain.sh ${FLATPAK_DEST}/bin/run-atrain.sh
       - install -Dm644 share/icons/${FLATPAK_ID}.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 share/metainfo/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
