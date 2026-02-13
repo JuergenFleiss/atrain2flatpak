@@ -90,6 +90,7 @@ torchaudio==2.8.0+cu128
 **Manual change:** remove any editable `-e file://...` lines (local paths).
 
 **Manual change:**  Remove aTrain_core
+
 ---
 
 ## Step 7 — Generate `atrain_python_dependencies.json` with `req2flatpak`
@@ -106,7 +107,7 @@ req2flatpak --requirements-file requirements.txt --target-platforms 313-x86_64 >
 
 ---
 
-## Step 8 — Manually Edit `atrain_python_dependencies.json` (Minimal Changes) for Torch/Cuda wheels
+## Step 8 — Manually Edit `atrain_python_dependencies.json` for Torch/Cuda wheels
 
 To document still...
 
@@ -122,4 +123,16 @@ From the `atrain2flatpak/` directory:
 
 ```
 flatpak-builder --force-clean --install --user build-dir io.github.JuergenFleiss.aTrain.yml
+```
+
+Build to local repo:
+
+```
+flatpak-builder --force-clean --repo=repo build-dir io.github.JuergenFleiss.aTrain.yml
+```
+
+Bundle in file:
+
+```
+flatpak build-bundle repo io.github.JuergenFleiss.aTrain.flatpak io.github.JuergenFleiss.aTrain
 ```
