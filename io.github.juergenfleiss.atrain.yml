@@ -45,4 +45,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuergenFleiss/aTrain.git
-        commit: 3e02273c788f5ed32ad7f9169d3eacb5c17e1e60
+        commit: a792149b3ae45d6e0a42e1deaee5b03f7947b33d
