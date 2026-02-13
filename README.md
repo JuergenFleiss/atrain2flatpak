@@ -107,7 +107,7 @@ req2flatpak --requirements-file requirements.txt --target-platforms 313-x86_64 >
 
 ---
 
-## Step 8 — Manually Edit `atrain_python_dependencies.json` (Minimal Changes) for Torch/Cuda wheels
+## Step 8 — Manually Edit `atrain_python_dependencies.json` for Torch/Cuda wheels
 
 To document still...
 
