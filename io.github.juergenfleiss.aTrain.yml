@@ -14,7 +14,6 @@ finish-args:
 modules:
   - atrain_python_dependencies.json
 
-  # aTrain Core (Git dependency / backend for atrain)
   - name: atrain-core
     buildsystem: simple
     build-commands:
@@ -23,7 +22,7 @@ modules:
       - type: git
         url: https://github.com/JuergenFleiss/atrain_core.git
         commit: df912fef4ed20d3c554b2854e2c90a4cea3f5f75
-  # ensure pygments exists in /app for nicegui runtime imports
+
   - name: pygments
     buildsystem: simple
     build-commands:
@@ -33,7 +32,7 @@ modules:
       - type: git
         url: https://github.com/pygments/pygments.git
         commit: d8400c6ad3d63ee76f8261925c764f4d4cdd7703
-    #Main app
+
   - name: atrain
     buildsystem: simple
     build-commands:
