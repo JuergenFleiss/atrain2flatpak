@@ -124,3 +124,15 @@ From the `atrain2flatpak/` directory:
 ```
 flatpak-builder --force-clean --install --user build-dir io.github.JuergenFleiss.aTrain.yml
 ```
+
+Build to local repo:
+
+```
+flatpak-builder --force-clean --repo=repo build-dir io.github.JuergenFleiss.aTrain.yml
+```
+
+Bundle in file:
+
+```
+flatpak build-bundle repo io.github.JuergenFleiss.aTrain.flatpak io.github.JuergenFleiss.aTrain
+```
