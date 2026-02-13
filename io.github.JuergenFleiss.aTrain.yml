@@ -6,7 +6,6 @@ command: run-atrain.sh
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
-  - --socket=pulseaudio
   - --device=dri #gpu acceleration
   - --share=ipc #gpu acceleration
   - --share=network #model download
@@ -23,7 +22,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuergenFleiss/atrain_core.git
-        commit: a81ab6fd3639b91fd6e7703a573a082ec5dfd6ce
+        commit: 4154187a2afdbccbc946e4a4b4e1e1b46ccf8672
   # ensure pygments exists in /app for nicegui runtime imports
   - name: pygments
     buildsystem: simple
