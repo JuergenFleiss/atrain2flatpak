@@ -1,4 +1,4 @@
-app-id: io.github.juergenfleiss.aTrain
+app-id: io.github.juergenfleiss.atrain
 runtime: org.gnome.Platform
 runtime-version: "49"
 sdk: org.gnome.Sdk
