@@ -1,4 +1,4 @@
-app-id: io.github.juergenfleiss.atrain
+app-id: io.github.juergenfleiss.aTrain
 runtime: org.gnome.Platform
 runtime-version: "49"
 sdk: org.gnome.Sdk
@@ -45,4 +45,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuergenFleiss/aTrain.git
-        commit: 865b4291a31cdfa8d1ab6a5e31998a6df28f752b
+        commit: 3e02273c788f5ed32ad7f9169d3eacb5c17e1e60
