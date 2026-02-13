@@ -1,0 +1,6 @@
+repo*/
+builddir/
+.flatpak-builder/
+aTrain/
+atrain_core/
+*.flatpak
