@@ -90,6 +90,7 @@ torchaudio==2.8.0+cu128
 **Manual change:** remove any editable `-e file://...` lines (local paths).
 
 **Manual change:**  Remove aTrain_core
+
 ---
 
 ## Step 7 — Generate `atrain_python_dependencies.json` with `req2flatpak`
