@@ -2,7 +2,8 @@
   "name": "python3-package-installation",
   "buildsystem": "simple",
   "build-commands": [
-    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation aiofiles aiohappyeyeballs aiohttp aiosignal alembic annotated-doc annotated-types anyio asteroid-filterbanks attrs av bidict bottle certifi charset-normalizer click cloudpickle colorlog contourpy ctranslate2 cycler dask docutils einops fastapi faster-whisper filelock flatbuffers fonttools frozenlist fsspec googleapis-common-protos greenlet grpcio h11 httpcore httptools httpx huggingface-hub idna ifaddr importlib-metadata itsdangerous jeepney jinja2 joblib julius kiwisolver lightning lightning-utilities locket mako markdown-it-py markdown2 markupsafe matplotlib mdurl mpmath multidict networkx nicegui numpy nvidia-cublas-cu12 nvidia-cuda-cupti-cu12 nvidia-cuda-nvrtc-cu12 nvidia-cuda-runtime-cu12 nvidia-cudnn-cu12 nvidia-cufft-cu12 nvidia-cufile-cu12 nvidia-curand-cu12 nvidia-cusolver-cu12 nvidia-cusparse-cu12 nvidia-cusparselt-cu12 nvidia-nccl-cu12 nvidia-nvjitlink-cu12 nvidia-nvshmem-cu12 nvidia-nvtx-cu12 onnxruntime opentelemetry-api opentelemetry-exporter-otlp opentelemetry-exporter-otlp-proto-common opentelemetry-exporter-otlp-proto-grpc opentelemetry-exporter-otlp-proto-http opentelemetry-proto opentelemetry-sdk opentelemetry-semantic-conventions optuna orjson packaging pandas partd pillow platformdirs primepy propcache protobuf proxy-tools pscript pyannote-audio pyannote-core pyannote-database pyannote-metrics pyannote-pipeline pyannoteai-sdk pydantic pydantic-core pygments pyparsing pyqt5 pyqt5-qt5 pyqt5-sip pyqt6 pyqt6-qt6 pyqt6-sip pyqt6-webengine pyqt6-webengine-qt6 pyqtwebengine pyqtwebengine-qt5 python-dateutil python-dotenv python-engineio python-multipart python-socketio pytorch-lightning pytorch-metric-learning pytz pywebview pyxdg pyyaml qtpy requests rich safetensors scikit-learn scipy setuptools shellingham show-in-file-manager simple-websocket six sortedcontainers sqlalchemy starlette sympy threadpoolctl tokenizers toolz torch torch-audiomentations torch-pitch-shift torchaudio torchcodec torchmetrics tqdm triton typer typing-extensions typing-inspection tzdata urllib3 uvicorn uvloop vbuild wakepy watchfiles websockets werkzeug wsproto yarl zipp"
+    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps --ignore-installed pygments*.whl",
+    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation aiofiles aiohappyeyeballs aiohttp aiosignal alembic annotated-doc annotated-types anyio asteroid-filterbanks attrs av bidict bottle certifi charset-normalizer click cloudpickle colorlog contourpy ctranslate2 cycler dask docutils einops fastapi faster-whisper filelock flatbuffers fonttools frozenlist fsspec googleapis-common-protos greenlet grpcio h11 httpcore httptools httpx huggingface-hub idna ifaddr importlib-metadata itsdangerous jeepney jinja2 joblib julius kiwisolver lightning lightning-utilities locket mako markdown-it-py markdown2 markupsafe matplotlib mdurl mpmath multidict networkx nicegui numpy nvidia-cublas-cu12 nvidia-cuda-cupti-cu12 nvidia-cuda-nvrtc-cu12 nvidia-cuda-runtime-cu12 nvidia-cudnn-cu12 nvidia-cufft-cu12 nvidia-cufile-cu12 nvidia-curand-cu12 nvidia-cusolver-cu12 nvidia-cusparse-cu12 nvidia-cusparselt-cu12 nvidia-nccl-cu12 nvidia-nvjitlink-cu12 nvidia-nvshmem-cu12 nvidia-nvtx-cu12 onnxruntime opentelemetry-api opentelemetry-exporter-otlp opentelemetry-exporter-otlp-proto-common opentelemetry-exporter-otlp-proto-grpc opentelemetry-exporter-otlp-proto-http opentelemetry-proto opentelemetry-sdk opentelemetry-semantic-conventions optuna orjson packaging pandas partd pillow platformdirs primepy propcache protobuf proxy-tools pscript pyannote-audio pyannote-core pyannote-database pyannote-metrics pyannote-pipeline pyannoteai-sdk pycairo pydantic pydantic-core pygments pygobject pygobject-stubs pyparsing python-dateutil python-dotenv python-engineio python-multipart python-socketio pytorch-lightning pytorch-metric-learning pytz pywebview pyxdg pyyaml requests rich safetensors scikit-learn scipy setuptools shellingham show-in-file-manager simple-websocket six sortedcontainers sqlalchemy starlette sympy threadpoolctl tokenizers toolz torch torch-audiomentations torch-pitch-shift torchaudio torchcodec torchmetrics tqdm triton typer typing-extensions typing-inspection tzdata urllib3 uvicorn uvloop vbuild wakepy watchfiles websockets werkzeug wsproto yarl zipp"
   ],
   "sources": [
     {
@@ -132,8 +133,8 @@
     },
     {
       "type": "file",
-      "url": "https://files.pythonhosted.org/packages/af/1a/f983b45661c79c31be575c570d46c437a5409b67a939c1b3d8d6b3ed7a7f/fastapi-0.128.7-py3-none-any.whl",
-      "sha256": "6bd9bd31cb7047465f2d3fa3ba3f33b0870b17d4eaf7cdb36d1576ab060ad662"
+      "url": "https://files.pythonhosted.org/packages/9e/dd/d0ee25348ac58245ee9f90b6f3cbb666bf01f69be7e0911f9851bddbda16/fastapi-0.129.0-py3-none-any.whl",
+      "sha256": "b4946880e48f462692b31c083be0432275cbfb6e2274566b1be91479cc1a84ec"
     },
     {
       "type": "file",
@@ -142,8 +143,8 @@
     },
     {
       "type": "file",
-      "url": "https://files.pythonhosted.org/packages/b5/36/7fb70f04bf00bc646cd5bb45aa9eddb15e19437a28b8fb2b4a5249fac770/filelock-3.20.3-py3-none-any.whl",
-      "sha256": "4b0dda527ee31078689fc205ec4f1c1bf7d56cf88b6dc9426c4f230e46c2dce1"
+      "url": "https://files.pythonhosted.org/packages/e7/04/a94ebfb4eaaa08db56725a40de2887e95de4e8641b9e902c311bfa00aa39/filelock-3.24.2-py3-none-any.whl",
+      "sha256": "667d7dc0b7d1e1064dd5f8f8e80bdac157a6482e8d2e02cd16fd3b6b33bd6556"
     },
     {
       "type": "file",
@@ -563,6 +564,11 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/22/d9/1728840a22a4ef8a8f479b9156aa2943cd98c3907accd3849fb0d5f82bfd/pycairo-1.29.0.tar.gz",
+      "sha256": "f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142"
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/5a/87/b70ad306ebb6f9b585f114d0ac2137d792b48be34d732d60e597c2f8465a/pydantic-2.12.5-py3-none-any.whl",
       "sha256": "e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d"
     },
@@ -579,68 +585,18 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2b/58/d34e67a79631177e3c08e7d02b5165147f590171f2cae6769502af5f7f7e/pygobject-3.50.0.tar.gz",
+      "sha256": "4500ad3dbf331773d8dedf7212544c999a76fc96b63a91b3dcac1e5925a1d103"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2d/1c/317ccaaa6a3ddce270652781cf09d3b1d5d343b1a1dabca304fe5c218474/pygobject_stubs-2.16.0.tar.gz",
+      "sha256": "a97574616e92ef458605f9520d8d9db4c2a131affcd12fdd51db0b42395291e9"
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/10/bd/c038d7cc38edc1aa5bf91ab8068b63d4308c66c4c8bb3cbba7dfbc049f9c/pyparsing-3.3.2-py3-none-any.whl",
       "sha256": "850ba148bd908d7e2411587e247a1e4f0327839c40e2e5e6d05a007ecc69911d"
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/b4/8c/4065950f9d013c4b2e588fe33cf04e564c2322842d84dbcbce5ba1dc28b0/PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl",
-      "sha256": "cd672a6738d1ae33ef7d9efa8e6cb0a1525ecf53ec86da80a9e1b6ec38c8d0f1",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/9a/46/ffe177f99f897a59dc237a20059020427bd2d3853d713992b8081933ddfe/pyqt5_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl",
-      "sha256": "bf2457e6371969736b4f660a0c153258fa03dbc6a181348218e6f05421682af7",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/48/2a/b08bc8efeb49c50c6cdac11417dc2c8eaefcac2f0a6382eae7b26dc0f232/pyqt5_sip-12.18.0-cp313-cp313-manylinux1_x86_64.manylinux_2_5_x86_64.whl",
-      "sha256": "c969631ada7293a81e1012b2264a62d69a91995b517586489dfe24421b87b9af",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/ec/3e/9a015651ec71cea2e2f960c37edeb21623ba96a74956c0827def837f7c6b/pyqt6-6.10.2-cp39-abi3-manylinux_2_34_x86_64.whl",
-      "sha256": "78e1b3d5763e4cbc84485aef600e0aba5e1932fd263b716f92cd1a40dfa5e924",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/d5/fe/01fd9b9d2ca139ef61582f2e2da249fa169229144294c1bb27db59ad8420/pyqt6_qt6-6.10.2-py3-none-manylinux_2_34_x86_64.whl",
-      "sha256": "19c10b5f0806e9f9bac2c9759bd5d7d19a78967f330fd60a2db409177fa76e49",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/0e/38/27c3aa3f153fcd83a0765fedf8e44a1136f189a322bcc9c494c5b3793cd7/pyqt6_sip-13.11.0-cp313-cp313-manylinux1_x86_64.manylinux_2_5_x86_64.whl",
-      "sha256": "a75144e8a0bcf9d1a9069011890401748af353749f1de1b6a314b880781edf9d",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/7b/d6/dd16a44378deecaeea747eb85c3cb816ac5bc30ea8622d647588415f57ad/pyqt6_webengine-6.10.0-1-cp39-abi3-manylinux_2_34_x86_64.whl",
-      "sha256": "95dc3c0c36c0e4eb4024e4fdbcfa1c5593a88e16de1563431a422084bec26974",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/bf/17/d7e5245e6c4f25747b7792c40bf5e26d6170585ea4412492097897ad9d39/pyqt6_webengine_qt6-6.10.2-py3-none-manylinux_2_34_x86_64.whl",
-      "sha256": "546a742677095d9fa047a4a5825bae60e7f55a8da0ab0bba3a565ca729c7ffd1",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/ea/a0/b36e7d6f0cd69b7dd58f0d733188e100115c5fce1c0606ad84bf35ef7ceb/PyQtWebEngine-5.15.7-cp38-abi3-manylinux_2_17_x86_64.whl",
-      "sha256": "965461ca0cf414e03bd510a9a0e2ea36dc21deaa7fc4a631be4a1f2aa0327179",
-      "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/cc/8e/ae2a4e9e0742b967857c10581f3313425da35c5ae31f8213a441bb46ac2c/pyqtwebengine_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl",
-      "sha256": "5765ee9ccdfe4841d6bac0e39da0690927c8bbcd943f2254098489c1140d6d6f",
-      "only-arches": ["x86_64"]
     },
     {
       "type": "file",
@@ -697,11 +653,6 @@
       "url": "https://files.pythonhosted.org/packages/74/27/e5b8f34d02d9995b80abcef563ea1f8b56d20134d8f4e5e81733b1feceb2/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6",
       "only-arches": ["x86_64"]
-    },
-    {
-      "type": "file",
-      "url": "https://files.pythonhosted.org/packages/69/76/37c0ccd5ab968a6a438f9c623aeecc84c202ab2fabc6a8fd927580c15b5a/QtPy-2.4.3-py3-none-any.whl",
-      "sha256": "72095afe13673e017946cc258b8d5da43314197b741ed2890e563cf384b51aa1"
     },
     {
       "type": "file",
@@ -795,9 +746,8 @@
     },
     {
       "type": "file",
-      "url": "https://download.pytorch.org/whl/cu128/torch-2.9.1%2Bcu128-cp313-cp313-manylinux_2_28_x86_64.whl",
-      "sha256": "63381a109a569b280ed3319da89d3afe5cf9ab5c879936382a212affb5c90552",
-      "dest-filename": "torch-2.9.1+cu128-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/f2/b7/6d3f80e6918213babddb2a37b46dbb14c15b14c5f473e347869a51f40e1f/torch-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "524de44cd13931208ba2c4bde9ec7741fd4ae6bfd06409a604fc32f6520c2bc9",
       "only-arches": ["x86_64"]
     },
     {
@@ -812,9 +762,8 @@
     },
     {
       "type": "file",
-      "url": "https://download.pytorch.org/whl/cu128/torchaudio-2.9.1%2Bcu128-cp313-cp313-manylinux_2_28_x86_64.whl",
-      "sha256": "52297b7dfb7c42e311385572bc9c0186e602ea1a5f20c42923765baea99aff83",
-      "dest-filename": "torchaudio-2.9.1+cu128-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/74/d3/0b090c03cac5a20691507e0945589a696fb10402ccd2457eea47dbf8a71b/torchaudio-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "bc3c8e9a240bfad8bc61f769324a4f3ce5d60eec161369d457c595c35dbb10c7",
       "only-arches": ["x86_64"]
     },
     {
@@ -866,8 +815,8 @@
     },
     {
       "type": "file",
-      "url": "https://files.pythonhosted.org/packages/3d/d8/2083a1daa7439a66f3a48589a57d576aa117726762618f6bb09fe3798796/uvicorn-0.40.0-py3-none-any.whl",
-      "sha256": "c6c8f55bc8bf13eb6fa9ff87ad62308bbbc33d0b67f84293151efe87e0d5f2ee"
+      "url": "https://files.pythonhosted.org/packages/83/e4/d04a086285c20886c0daad0e026f250869201013d18f81d9ff5eada73a88/uvicorn-0.41.0-py3-none-any.whl",
+      "sha256": "29e35b1d2c36a04b9e180d4007ede3bcb32a85fbdfd6c6aeb3f26839de088187"
     },
     {
       "type": "file",

@@ -18,20 +18,10 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps .
+      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/$FLATPAK_ID/atrain_core
     sources:
-      - type: git
-        url: https://github.com/JuergenFleiss/atrain_core.git
-        commit: df912fef4ed20d3c554b2854e2c90a4cea3f5f75
-
-  - name: pygments
-    buildsystem: simple
-    build-commands:
-      - install -d ${FLATPAK_DEST}/lib/python3.13/site-packages
-      - cp -a pygments ${FLATPAK_DEST}/lib/python3.13/site-packages/
-    sources:
-      - type: git
-        url: https://github.com/pygments/pygments.git
-        commit: d8400c6ad3d63ee76f8261925c764f4d4cdd7703
+      - type: dir
+        path: atrain_core
 
   - name: atrain
     buildsystem: simple
@@ -41,7 +31,7 @@ modules:
       - install -Dm644 share/icons/${FLATPAK_ID}.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 share/metainfo/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 share/applications/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm0644 LICENSE -t ${FLATPAK_DEST}/share/licenses/$FLATPAK_ID/atrain
     sources:
-      - type: git
-        url: https://github.com/JuergenFleiss/aTrain.git
-        commit: f68593eb9cb888f6c3ab78ebd06a622ef786a0d1
+      - type: dir
+        path: aTrain
